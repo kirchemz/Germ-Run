@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c42d3nct2kaiq"]
+
+[ext_resource type="Script" path="res://Player/lazer.gd" id="1_gdjfj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlj52"]
+size = Vector2(94.5, 2)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_skp3v"]
+
+[node name="Lazer" type="Area2D"]
+script = ExtResource("1_gdjfj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_rlj52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(93.8991, 1.89059)
+texture = SubResource("CanvasTexture_skp3v")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

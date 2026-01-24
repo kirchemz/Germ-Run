@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=3 uid="uid://v8vyl71amswt"]
+
+[ext_resource type="Texture2D" uid="uid://bm5gxonxp3dha" path="res://Zombie/Spritesheets/idle.png" id="1_3fe7s"]
+[ext_resource type="Script" path="res://Zombie/zombie.gd" id="1_41miy"]
+[ext_resource type="Texture2D" uid="uid://b6c4hanb1bkf6" path="res://Zombie/Spritesheets/001_walking.png" id="2_qnsj2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvduj"]
+radius = 6.61668
+height = 22.1983
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmq4s"]
+atlas = ExtResource("1_3fe7s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pyn2"]
+atlas = ExtResource("1_3fe7s")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsx6h"]
+atlas = ExtResource("2_qnsj2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wucjw"]
+atlas = ExtResource("2_qnsj2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7hqq"]
+atlas = ExtResource("2_qnsj2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skiie"]
+atlas = ExtResource("2_qnsj2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mug2n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmq4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pyn2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsx6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wucjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7hqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skiie")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fl12p"]
+radius = 203.735
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m2cl4"]
+radius = 8.00967
+height = 25.6808
+
+[node name="Zombie" type="CharacterBody2D"]
+scale = Vector2(2.87153, 2.87153)
+script = ExtResource("1_41miy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_tvduj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_mug2n")
+animation = &"Run"
+frame = 3
+frame_progress = 0.0408565
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_fl12p")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_m2cl4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]

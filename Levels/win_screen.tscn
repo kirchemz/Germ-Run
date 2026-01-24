@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://clkwsuhu7k6rr"]
+
+[ext_resource type="Script" path="res://Levels/win_screen.gd" id="1_nw801"]
+[ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="1_xxol1"]
+
+[node name="Win Screen" type="Node2D"]
+script = ExtResource("1_nw801")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 272.0
+offset_top = 91.0
+offset_right = 935.0
+offset_bottom = 275.0
+scale = Vector2(0.891422, 0.891422)
+theme_override_fonts/font = ExtResource("1_xxol1")
+theme_override_font_sizes/font_size = 181
+text = "YOU WIN!!!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 255.0
+offset_right = 2039.0
+offset_bottom = 822.0
+scale = Vector2(0.108906, 0.108906)
+theme_override_fonts/font = ExtResource("1_xxol1")
+theme_override_font_sizes/font_size = 561
+text = "DEATHS: "
