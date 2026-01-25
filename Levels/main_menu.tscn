@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd7tg56k56nk7"]
 
-[ext_resource type="Script" path="res://Levels/Main Menu.gd" id="1_gkmwi"]
+[ext_resource type="Script" uid="uid://sbqlad2bi6jm" path="res://Levels/Main Menu.gd" id="1_gkmwi"]
 [ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="2_ylnwf"]
 
 [node name="Main Menu" type="Node2D"]
