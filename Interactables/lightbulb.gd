@@ -7,8 +7,9 @@ func _process(delta):
 	if activated:
 		on()
 		await get_tree().create_timer(wait_time).timeout
-		activated = false
 		Globals.lightbulb_on = false
+		activated = false
+	else:
 		off()
 func on():
 	$Off.visible = false
