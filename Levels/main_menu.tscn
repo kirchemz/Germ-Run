@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd7tg56k56nk7"]
+
+[ext_resource type="Script" path="res://Levels/Main Menu.gd" id="1_gkmwi"]
+[ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="2_ylnwf"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_gkmwi")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 250.0
+offset_top = 84.0
+offset_right = 1040.0
+offset_bottom = 323.0
+scale = Vector2(0.747359, 0.747359)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 236
+text = "Germ Run"
+
+[node name="Credits Title" type="Label" parent="."]
+visible = false
+offset_left = 299.0
+offset_top = 84.0
+offset_right = 1089.0
+offset_bottom = 323.0
+scale = Vector2(0.747359, 0.747359)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 236
+text = "Credits"
+
+[node name="Credits List" type="Label" parent="."]
+visible = false
+offset_left = 84.0
+offset_top = 263.0
+offset_right = 4830.0
+offset_bottom = 1470.0
+scale = Vector2(0.206065, 0.206065)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 236
+text = "Hana Caraka (Player Sprite): ITCH.IO account Otterisk
+
+Zombie Sprite: Itch.IO account Pop Shop Packs
+
+Futuristic Tileset: ITCH.IO account Deakcor"
+
+[node name="Start Button" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 312.0
+offset_right = 768.0
+offset_bottom = 444.0
+scale = Vector2(0.691466, 0.691466)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 121
+text = "START"
+
+[node name="Back Button" type="Button" parent="."]
+visible = false
+offset_left = 28.0
+offset_top = 37.0
+offset_right = 267.0
+offset_bottom = 169.0
+scale = Vector2(0.632167, 0.632167)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 121
+text = "Back"
+
+[node name="Credits Button" type="Button" parent="."]
+offset_left = 469.0
+offset_top = 429.0
+offset_right = 816.0
+offset_bottom = 561.0
+scale = Vector2(0.691466, 0.691466)
+theme_override_fonts/font = ExtResource("2_ylnwf")
+theme_override_font_sizes/font_size = 121
+text = "CREDITS"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Credits Button" to="." method="_on_credits_pressed"]
