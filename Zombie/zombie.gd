@@ -40,5 +40,3 @@ func _on_area_2d_2_body_entered(body):
 		Globals.lightbulb_on_3 = false
 		Globals.lightbulb_on_4 = false
 		Globals.lightbulb_on_5 = false
-
-
