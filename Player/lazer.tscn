@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c42d3nct2kaiq"]
 
-[ext_resource type="Script" path="res://Player/lazer.gd" id="1_gdjfj"]
+[ext_resource type="Script" uid="uid://c3b0fb4gk4olo" path="res://Player/lazer.gd" id="1_gdjfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlj52"]
 size = Vector2(94.5, 2)

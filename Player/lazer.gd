@@ -4,7 +4,7 @@ var speed = 600
 var player_input
 
 
-func _process(_delta):
+func _process(delta):
 	position += player_input * speed * delta
 
 func _on_area_entered(area):
