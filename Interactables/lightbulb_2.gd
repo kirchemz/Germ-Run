@@ -2,10 +2,6 @@ extends Area2D
 
 var activated = false
 var wait_time = 0
-var turn_off = false
-
-var start_timer = false
-
 
 func _process(_delta):
 	if activated:

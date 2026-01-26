@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://clkwsuhu7k6rr"]
 
-[ext_resource type="Script" path="res://Levels/win_screen.gd" id="1_nw801"]
+[ext_resource type="Script" uid="uid://cfjnj2y3jcui4" path="res://Levels/win_screen.gd" id="1_nw801"]
 [ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="1_xxol1"]
 
 [node name="Win Screen" type="Node2D"]
@@ -25,3 +25,13 @@ scale = Vector2(0.108906, 0.108906)
 theme_override_fonts/font = ExtResource("1_xxol1")
 theme_override_font_sizes/font_size = 561
 text = "DEATHS: "
+
+[node name="Button" type="Button" parent="."]
+offset_left = 477.0
+offset_top = 392.0
+offset_right = 801.0
+offset_bottom = 524.0
+scale = Vector2(0.4903925, 0.4903925)
+theme_override_fonts/font = ExtResource("1_xxol1")
+theme_override_font_sizes/font_size = 121
+text = "Replay"

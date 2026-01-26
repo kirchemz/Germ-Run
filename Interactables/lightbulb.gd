@@ -3,7 +3,7 @@ extends Area2D
 var activated = false
 var wait_time = 0
 
-func _process(delta):
+func _process(_delta):
 	if activated:
 		on()
 		await get_tree().create_timer(wait_time).timeout
