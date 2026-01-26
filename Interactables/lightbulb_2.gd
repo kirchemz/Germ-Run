@@ -4,19 +4,15 @@ var activated = false
 var wait_time = 0
 var turn_off = false
 
-func _ready():
-	pass
+var start_timer = false
 
-func _process(delta):
-	if not $Timer.wait_time == wait_time:
-		$Timer.wait_time = wait_time
+
+func _process(_delta):
 	if activated:
 		on()
-		$Timer.start()
-		if turn_off:
-			Globals.lightbulb_on_2 = false
-			activated = false
-			$Timer.stop()
+		await get_tree().create_timer(wait_time).timeout
+		Globals.lightbulb_on_3 = false
+		activated = false
 	else:
 		off()
 func on():
@@ -26,6 +22,3 @@ func on():
 func off():
 	$Off.visible = true
 	$On.visible = false
-
-func _on_timer_timeout():
-	turn_off = true
