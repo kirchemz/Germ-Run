@@ -31,7 +31,7 @@ func _process(delta):
 			sent_zombies = true
 	if open_door:
 		if $Door.player_in:
-			get_tree().change_scene_to_file("res://Levels/level_four.tscn")
+			get_tree().change_scene_to_file("res://Levels/level_three.tscn")
 	if $Lever.player_in:
 		player.input_space()
 		if player.space_bar_active:

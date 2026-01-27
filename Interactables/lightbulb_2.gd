@@ -7,7 +7,7 @@ func _process(_delta):
 	if activated:
 		on()
 		await get_tree().create_timer(wait_time).timeout
-		Globals.lightbulb_on_3 = false
+		Globals.lightbulb_on_2 = false
 		activated = false
 	else:
 		off()
