@@ -234,6 +234,16 @@ theme_override_fonts/font = ExtResource("2_qtvdw")
 theme_override_font_sizes/font_size = 121
 text = "Hit the lightbulb that stays on the longest first"
 
+[node name="Label2" type="Label" parent="TileMap"]
+offset_left = 153.0
+offset_top = 98.0
+offset_right = 2410.0
+offset_bottom = 222.0
+scale = Vector2(0.25684202, 0.25684202)
+theme_override_fonts/font = ExtResource("2_qtvdw")
+theme_override_font_sizes/font_size = 121
+text = "1"
+
 [node name="Lightbulb" parent="." instance=ExtResource("5_xtolm")]
 visible = false
 position = Vector2(32, 14)

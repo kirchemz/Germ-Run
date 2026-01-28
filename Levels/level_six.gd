@@ -60,7 +60,7 @@ func _process(delta):
 	if activate_door:
 		if $Door.player_in:
 			Globals.lightbulb_on = false
-			get_tree().change_scene_to_file("res://Levels/win_screen.tscn")
+			get_tree().change_scene_to_file("res://Levels/cure_room.tscn")
 	if Globals.lightbulb_on:
 		$Lightbulb.activated = true
 		open_door = true
