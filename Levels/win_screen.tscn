@@ -26,6 +26,16 @@ theme_override_fonts/font = ExtResource("1_xxol1")
 theme_override_font_sizes/font_size = 561
 text = "DEATHS: "
 
+[node name="Label3" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 317.0
+offset_right = 2039.0
+offset_bottom = 884.0
+scale = Vector2(0.079327144, 0.079327144)
+theme_override_fonts/font = ExtResource("1_xxol1")
+theme_override_font_sizes/font_size = 561
+text = "You've saved your crew!"
+
 [node name="Button" type="Button" parent="."]
 offset_left = 477.0
 offset_top = 392.0
@@ -35,3 +45,5 @@ scale = Vector2(0.4903925, 0.4903925)
 theme_override_fonts/font = ExtResource("1_xxol1")
 theme_override_font_sizes/font_size = 121
 text = "Replay"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

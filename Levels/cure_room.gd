@@ -8,7 +8,7 @@ var player_in = false
 func _ready() -> void:
 	player.countdown.visible = false
 	player.get_node("Camera2D").zoom = Vector2(3, 3)
-
+	player.speed = 200
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,8 +16,15 @@ func _process(delta: float) -> void:
 		player.input_space()
 		if player.space_bar_active:
 			get_tree().change_scene_to_file("res://Levels/win_screen.tscn")
+	else:
+		player.remove_space()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player_in = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		player_in = false

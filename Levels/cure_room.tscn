@@ -127,3 +127,4 @@ position = Vector2(161, 155)
 scale = Vector2(3.1023908, 3.1023908)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
