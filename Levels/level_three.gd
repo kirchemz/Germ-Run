@@ -22,7 +22,7 @@ func _ready():
 func _process(delta):
 	if $Door.player_in:
 		if door_opened:
-			get_tree().change_scene_to_file("res://Levels/level_four.tscn")
+			get_tree().change_scene_to_file("res://Levels/cure_part_1.tscn")
 	if not sent_zombies:
 		if player.send_zombies:
 			var zombie_instance = zombie.instantiate()

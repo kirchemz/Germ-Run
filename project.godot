@@ -23,6 +23,19 @@ Globals="*res://Globals.gd"
 
 window/stretch/mode="canvas_items"
 
+[file_customization]
+
+folder_colors={
+"res://Interactables/": "red",
+"res://Levels/": "orange",
+"res://Miscellaneous/": "yellow",
+"res://Player/": "green",
+"res://Sprites/": "teal",
+"res://Tileset/": "blue",
+"res://UI/": "purple",
+"res://Zombie/": "pink"
+}
+
 [input]
 
 left={

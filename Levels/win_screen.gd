@@ -5,4 +5,5 @@ func _ready():
 
 
 func _on_button_pressed() -> void:
+	Globals.deaths = 0
 	get_tree().change_scene_to_file("res://Levels/main_menu.tscn")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://do3rp10lcofmm"]
+
+[ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="1_mbkd3"]
+
+[node name="Ideas" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 210.00002
+offset_top = 284.0
+offset_right = 608.0
+offset_bottom = 307.0
+scale = Vector2(1.9890398, 1.9890398)
+text = "Add dialogue boxes that give lore about each room."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 311.0
+offset_top = -13.0
+offset_right = 873.0
+offset_bottom = 287.0
+theme_override_fonts/font = ExtResource("1_mbkd3")
+theme_override_font_sizes/font_size = 296
+text = "Ideas"

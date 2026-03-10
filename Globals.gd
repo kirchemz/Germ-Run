@@ -9,3 +9,5 @@ var lightbulb_on_4 = false
 var lightbulb_on_5 = false
 
 var player_direction
+
+var time = 0

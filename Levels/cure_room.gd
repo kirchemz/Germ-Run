@@ -11,20 +11,18 @@ func _ready() -> void:
 	player.speed = 200
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player_in:
 		player.input_space()
 		if player.space_bar_active:
-			get_tree().change_scene_to_file("res://Levels/win_screen.tscn")
+			$Control.visible = true
 	else:
 		player.remove_space()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		player_in = true
+	player_in = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
-		player_in = false
+	player_in = true
