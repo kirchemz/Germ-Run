@@ -3,6 +3,11 @@ extends Node2D
 var player_in = false
 @onready var player = $Player
 
+func _ready() -> void:
+	player.countdown.visible = false
+	player.get_node("Camera2D").zoom = Vector2(4, 4)
+	player.speed = 100
+
 func _process(delta: float) -> void:
 	if player_in:
 		player.input_space()

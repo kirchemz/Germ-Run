@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpolkhdkxb8u7"]
 
-[ext_resource type="Script" path="res://UI/zombie_countdown.gd" id="1_u38dd"]
+[ext_resource type="Script" uid="uid://co6urcup1wehq" path="res://UI/zombie_countdown.gd" id="1_u38dd"]
 [ext_resource type="Texture2D" uid="uid://cb6ir66cekui8" path="res://Sprites/UI_Flat_Banner04a.png" id="2_7ob4u"]
 [ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="3_egh27"]
 

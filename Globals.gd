@@ -11,3 +11,11 @@ var lightbulb_on_5 = false
 var player_direction
 
 var time = 0
+
+var is_holding_1 = false
+var is_holding_2 = false
+var is_holding_3 = false
+
+var crafting_box_1_full = false
+var crafting_box_2_full = false
+var hide_crafting = false

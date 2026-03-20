@@ -6,8 +6,13 @@ extends CharacterBody2D
 var speed = 300
 var input_direction
 
+var no_space_available = false
+
 var space_bar_active = false
 var send_zombies = false
+
+func _ready() -> void:
+	remove_space()
 
 func _process(delta):
 	if input_direction != Vector2(0, 0):

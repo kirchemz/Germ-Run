@@ -235,6 +235,3 @@ zoom = Vector2(1.895, 1.895)
 [node name="Zombie Countdown" parent="." instance=ExtResource("5_amfqr")]
 position = Vector2(-62.7979, -64.4343)
 scale = Vector2(0.492125, 0.492125)
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(0, -14.114182)

@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://0imbvwotycga"]
+
+[ext_resource type="Script" uid="uid://ba5hvmmqtmda8" path="res://UI/crafting_ui.gd" id="1_c5m30"]
+[ext_resource type="Texture2D" uid="uid://bcmrxuobbluae" path="res://Miscellaneous/pixil-frame-0 (21).png" id="1_sac6m"]
+[ext_resource type="Script" uid="uid://casmnw81xi1fy" path="res://UI/crafting_box_1.gd" id="3_2idwb"]
+[ext_resource type="Script" uid="uid://d2e61i3h4vjam" path="res://UI/crafting_box_2.gd" id="4_y8hct"]
+[ext_resource type="Texture2D" uid="uid://dgekf5r005ho8" path="res://Miscellaneous/pixil-frame-0 (11).png" id="5_55cq4"]
+[ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="6_2i6t4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sac6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1n65o"]
+radius = 5.0
+height = 16.0
+
+[node name="Crafting_UI" type="Node2D"]
+script = ExtResource("1_c5m30")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -4876.0
+offset_top = -1383.9999
+offset_right = -4836.0
+offset_bottom = -1343.9999
+scale = Vector2(781.62634, 100.247116)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 310.0
+offset_top = 65.99999
+offset_right = 350.0
+offset_bottom = 105.99999
+scale = Vector2(13.081358, 13.081358)
+texture = ExtResource("1_sac6m")
+
+[node name="Crafting Box 1" type="Area2D" parent="."]
+position = Vector2(423, 328)
+scale = Vector2(4.9583015, 6.530868)
+script = ExtResource("3_2idwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crafting Box 1"]
+shape = SubResource("RectangleShape2D_sac6m")
+
+[node name="Crafting Box 2" type="Area2D" parent="."]
+position = Vector2(718, 328)
+scale = Vector2(4.9583015, 6.530868)
+script = ExtResource("4_y8hct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crafting Box 2"]
+shape = SubResource("RectangleShape2D_sac6m")
+
+[node name="Cure" type="Area2D" parent="."]
+visible = false
+position = Vector2(570, 328)
+scale = Vector2(8.208754, 8.208754)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cure"]
+shape = SubResource("CapsuleShape2D_1n65o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cure"]
+texture = ExtResource("5_55cq4")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 455.0
+offset_top = 416.0
+offset_right = 2614.0
+offset_bottom = 1260.0
+scale = Vector2(0.10873084, 0.10873084)
+theme_override_fonts/font = ExtResource("6_2i6t4")
+theme_override_font_sizes/font_size = 826
+text = "Pick Up"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 352.00003
+offset_top = 172.0
+offset_right = 10576.0
+offset_bottom = 1685.0
+scale = Vector2(0.043386415, 0.043386415)
+theme_override_fonts/font = ExtResource("6_2i6t4")
+theme_override_font_sizes/font_size = 746
+text = "Craft the Cure by putting the pieces
+on the crafting boxes on the sides."
+
+[connection signal="area_entered" from="Crafting Box 1" to="Crafting Box 1" method="_on_area_entered"]
+[connection signal="area_exited" from="Crafting Box 1" to="Crafting Box 1" method="_on_area_exited"]
+[connection signal="area_entered" from="Crafting Box 2" to="Crafting Box 2" method="_on_area_entered"]
+[connection signal="area_exited" from="Crafting Box 2" to="Crafting Box 2" method="_on_area_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
