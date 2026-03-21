@@ -17,3 +17,4 @@ func _on_button_pressed() -> void:
 	$"../Label".visible = true
 	$"../Player".unkill()
 	$"..".has_cure = true
+	$"../Player".remove_space()
