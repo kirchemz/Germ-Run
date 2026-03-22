@@ -17,10 +17,10 @@ var activate_door
 
 func _ready():
 	$Lightbulb.wait_time = 0.2
-	$"Lightbulb 2".wait_time = 2
-	$Lightbulb_3.wait_time = 4
-	$Lightbulb_4.wait_time = 6
-	$Lightbulb_5.wait_time = 8
+	$"Lightbulb 2".wait_time = 3
+	$Lightbulb_3.wait_time = 5
+	$Lightbulb_4.wait_time = 7
+	$Lightbulb_5.wait_time = 9
 	player.get_node("Camera2D").zoom = Vector2(2, 2)
 	player.speed = 200
 	player.kill()

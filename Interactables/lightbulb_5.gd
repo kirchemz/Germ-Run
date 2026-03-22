@@ -5,12 +5,12 @@ var wait_time = 0
 
 func _process(_delta):
 	if activated:
-		on()
+		off()
 		await get_tree().create_timer(wait_time).timeout
 		Globals.lightbulb_on_5 = false
 		activated = false
 	else:
-		off()
+		on()
 func on():
 	$Off.visible = false
 	$On.visible = true
