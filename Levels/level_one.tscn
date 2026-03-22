@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8ortsynts7wo"]
+[gd_scene load_steps=10 format=3 uid="uid://b8ortsynts7wo"]
 
 [ext_resource type="Script" uid="uid://vq15dmp7se36" path="res://Levels/level_one.gd" id="1_o6iau"]
 [ext_resource type="Texture2D" uid="uid://dhpk5sm3pnirm" path="res://Miscellaneous/tileset_complet.png" id="2_hvigl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd8olwe6asr8m" path="res://Interactables/lever.tscn" id="3_s6teh"]
 [ext_resource type="PackedScene" uid="uid://dv08kwgh3hwnr" path="res://Player/player.tscn" id="4_1ma67"]
 [ext_resource type="PackedScene" uid="uid://b6t0oy182fq7d" path="res://Interactables/door.tscn" id="5_i28h5"]
+[ext_resource type="PackedScene" uid="uid://bfr235min33ta" path="res://Interactables/dialogue_box.tscn" id="7_ya8ts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u4piq"]
 texture = ExtResource("2_hvigl")
@@ -125,7 +126,6 @@ text = "LEVEL One"
 metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 position = Vector2(34, 15)
 scale = Vector2(1.82167, 1.82167)
 tile_set = SubResource("TileSet_nxvep")
@@ -144,6 +144,7 @@ theme_override_font_sizes/font_size = 91
 text = "Use Levers to open doors"
 
 [node name="Label2" type="Label" parent="TileMap"]
+visible = false
 modulate = Color(1, 1, 1, 0.439216)
 offset_left = 107.59359
 offset_top = 104.29989
@@ -164,4 +165,9 @@ position = Vector2(502, 6)
 
 [node name="Player" parent="." instance=ExtResource("4_1ma67")]
 visible = false
-position = Vector2(570, 301)
+position = Vector2(570, 280.00003)
+
+[node name="Dialogue Box" parent="." instance=ExtResource("7_ya8ts")]
+visible = false
+position = Vector2(557, 433)
+scale = Vector2(6.191704, 4.1195436)

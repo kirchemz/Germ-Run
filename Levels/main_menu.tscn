@@ -40,7 +40,10 @@ text = "Hana Caraka (Player Sprite): ITCH.IO account Otterisk
 
 Zombie Sprite: Itch.IO account Pop Shop Packs
 
-Futuristic Tileset: ITCH.IO account Deakcor"
+Futuristic Tileset: ITCH.IO account Deakcor
+
+Ui Assets: Itch.IO account crusenho"
+horizontal_alignment = 1
 
 [node name="Start Button" type="Button" parent="."]
 offset_left = 494.0

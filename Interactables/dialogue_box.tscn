@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfr235min33ta"]
+
+[ext_resource type="Texture2D" uid="uid://cxtenrxyvljr6" path="res://Sprites/UI_Flat_Banner03a.png" id="1_h6o6s"]
+[ext_resource type="Script" uid="uid://butydwiblxxj0" path="res://Interactables/dialogue_box.gd" id="1_l4ldj"]
+[ext_resource type="FontFile" uid="uid://jt0fvocngq7h" path="res://Miscellaneous/pixel-game.regular.otf" id="2_l4ldj"]
+
+[node name="Dialogue Box" type="Node2D"]
+script = ExtResource("1_l4ldj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = -75.0
+offset_top = -24.999998
+offset_right = 211.0
+offset_bottom = 44.0
+scale = Vector2(0.544659, 0.6965898)
+texture = ExtResource("1_h6o6s")
+region_rect = Rect2(0, 0, 64, 20)
+patch_margin_left = 5
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 5
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 1716.0
+offset_bottom = 734.0
+scale = Vector2(0.16637766, 0.093104675)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_l4ldj")
+theme_override_font_sizes/font_size = 726
+visible_characters = 0
+visible_ratio = 0.0
