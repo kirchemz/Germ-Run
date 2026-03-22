@@ -126,6 +126,7 @@ text = "LEVEL One"
 metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2(34, 15)
 scale = Vector2(1.82167, 1.82167)
 tile_set = SubResource("TileSet_nxvep")
